@@ -1,0 +1,21 @@
+<h4> {{ listaNombre }} </h4><!--Nota, mandar como componente-->
+    <ul class ="list-group">
+      <li
+      *ngFor="let character of characterList;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd;
+      "
+      class="list-group-item"
+      >
+
+      <span class="text-primary"> {{i + 1}}. </span>
+        <strong>Name: </strong>
+        <span>{{ character.name }}</span>
+        -
+        <strong>Power: </strong>
+        <span>{{ character.power }}</span>
+      </li>
+    </ul>
